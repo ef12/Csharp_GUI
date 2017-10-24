@@ -18,3 +18,13 @@ C:\Users\user\Documents\OurFiles\6.Ehud\Study\Visual Studio\SerialGUI_V001\Seria
 C:\Users\user\Documents\OurFiles\6.Ehud\Study\Visual Studio\SerialGUI_V001\SerialGUI_V001\obj\Debug\SerialGUI_V001.exe
 C:\Users\user\Documents\OurFiles\6.Ehud\Study\Visual Studio\SerialGUI_V001\SerialGUI_V001\obj\Debug\SerialGUI_V001.pdb
 C:\Users\user\Documents\OurFiles\6.Ehud\Study\Visual Studio\SerialGUI_V001\SerialGUI_V001\obj\Debug\SerialGUI_V001.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Software_Devel\Csharp_GUI\SerialGUI_V001\SerialGUI_V001\bin\Debug\SerialGUI_V001.exe.config
+C:\Users\user\Documents\Software_Devel\Csharp_GUI\SerialGUI_V001\SerialGUI_V001\bin\Debug\SerialGUI_V001.exe
+C:\Users\user\Documents\Software_Devel\Csharp_GUI\SerialGUI_V001\SerialGUI_V001\bin\Debug\SerialGUI_V001.pdb
+C:\Users\user\Documents\Software_Devel\Csharp_GUI\SerialGUI_V001\SerialGUI_V001\obj\Debug\SerialGUI_V001.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Software_Devel\Csharp_GUI\SerialGUI_V001\SerialGUI_V001\obj\Debug\WindowsFormsApplication1.Form1.resources
+C:\Users\user\Documents\Software_Devel\Csharp_GUI\SerialGUI_V001\SerialGUI_V001\obj\Debug\SerialGUI_V001.Properties.Resources.resources
+C:\Users\user\Documents\Software_Devel\Csharp_GUI\SerialGUI_V001\SerialGUI_V001\obj\Debug\SerialGUI_V001.csproj.GenerateResource.Cache
+C:\Users\user\Documents\Software_Devel\Csharp_GUI\SerialGUI_V001\SerialGUI_V001\obj\Debug\SerialGUI_V001.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Software_Devel\Csharp_GUI\SerialGUI_V001\SerialGUI_V001\obj\Debug\SerialGUI_V001.exe
+C:\Users\user\Documents\Software_Devel\Csharp_GUI\SerialGUI_V001\SerialGUI_V001\obj\Debug\SerialGUI_V001.pdb

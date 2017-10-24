@@ -20,6 +20,7 @@ namespace WindowsFormsApplication1
         {
 
         }
+
         void GetAvilablePorts()
         {
             String[] Ports = SerialPort.GetPortNames();
@@ -33,26 +34,25 @@ namespace WindowsFormsApplication1
                 
                 if (PortNameComboBox.Text == "" || BaudRatecomboBox.Text == "")
                 {
-                    RxTextBox.Text = "Please select port settings";
+                    terminalBox.Text = "Please select port settings";
                 }
                 else
                 {
-                    RxTextBox.Enabled = true;
                     serialPort1.PortName = PortNameComboBox.Text;
                     serialPort1.BaudRate = Convert.ToInt32(BaudRatecomboBox.Text);
                     serialPort1.Open();
-                    RxButton.Enabled = true;
                     TxButton.Enabled = true;
-                    TxTextBox.Enabled = true;
-                    ConnectPortbutton.Enabled = false;
+                    txBox.Enabled = true;
+                    clrButton.Enabled = true;
                     DisconnectPortbutton.Enabled = true;
-
-                    progressBar1.Value = 100;
+                    ConnectPortbutton.Enabled = false;
+                    PortNameComboBox.Enabled = false;
+                    BaudRatecomboBox.Enabled = false;
                 }
             }
             catch(UnauthorizedAccessException)
             {
-                RxTextBox.Text = "UnauthorizedAccessException";
+                terminalBox.Text = "UnauthorizedAccessException";
             }
         }
 
@@ -62,27 +62,24 @@ namespace WindowsFormsApplication1
             {
                 serialPort1.Close();
 
-                RxButton.Enabled = false;
                 TxButton.Enabled = false;
-                TxTextBox.Enabled = false;
-                ConnectPortbutton.Enabled = true;
+                txBox.Enabled = false;
                 DisconnectPortbutton.Enabled = false;
-
-                progressBar1.Value = 0;
+                clrButton.Enabled = false;
+                ConnectPortbutton.Enabled = true;
+                PortNameComboBox.Enabled = true;
+                BaudRatecomboBox.Enabled = true;
             }
 
         }
         
         private void DisplayText(object sender, EventArgs e)
         {
-            RxTextBox.AppendText(rxString);
+            terminalBox.AppendText(rxString);
         }
 
         private void RxFlag(object sender, SerialDataReceivedEventArgs e)
         {
-            //serialPort1.ReadLine();
-            //RxTextBox.Text = Convert.ToString(serialPort1.ReadChar());
-            //RxTextBox.Text =  "Dada Rx Event";
             rxString = serialPort1.ReadExisting();
             this.Invoke(new EventHandler(DisplayText));
         }
@@ -91,19 +88,26 @@ namespace WindowsFormsApplication1
         {
             try
             {
-                RxTextBox.Text = serialPort1.ReadLine();
+                terminalBox.Text = serialPort1.ReadLine();
             }
             catch (TimeoutException)
             {
-                RxTextBox.Text = "TimeoutException";
+                terminalBox.Text = "TimeoutException";
             }
         }
 
-        private void TxTextBox_KeyPress(object sender, KeyPressEventArgs e)
+        private void txBox_KeyPress(object sender, KeyPressEventArgs e)
         {
             char[] buff = new char[1];
             buff[0] = e.KeyChar;
+
             serialPort1.Write(buff, 0, 1);
+        }
+
+        private void clrButton_Click(object sender, EventArgs e)
+        {
+            terminalBox.ResetText();
+            txBox.ResetText();
         }
     }
 }
